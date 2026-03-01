@@ -1,0 +1,11 @@
+# Firebase App Hosting Yapılandırması
+# Bu dosya GitHub üzerinden otomatik dağıtımı yönetir.
+
+runConfig:
+  minInstances: 0
+  maxInstances: 1
+  memory: 512MiB
+
+env:
+  - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+    value: studio-2347257907-bf93f

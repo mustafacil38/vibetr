@@ -1,0 +1,48 @@
+
+{
+  "entities": {
+    "SiteSettings": {
+      "title": "SiteSettings",
+      "type": "object",
+      "description": "Uygulama genel ayarları ve özelleştirmeleri.",
+      "properties": {
+        "siteName": { "type": "string" },
+        "logoUrl": { "type": "string" },
+        "streamUrl": { "type": "string", "description": "YouTube canlı yayın veya video URL'si" },
+        "heroTitle": { "type": "string" },
+        "heroDescription": { "type": "string" },
+        "showHero": { "type": "boolean" },
+        "adCode": { "type": "string" },
+        "customScripts": { "type": "string" },
+        "footerText": { "type": "string" },
+        "instagramUrl": { "type": "string" },
+        "xUrl": { "type": "string" },
+        "termsLabel": { "type": "string" },
+        "termsUrl": { "type": "string" },
+        "privacyLabel": { "type": "string" },
+        "privacyUrl": { "type": "string" }
+      }
+    },
+    "AdminSecret": {
+      "title": "AdminSecret",
+      "type": "object",
+      "description": "Yönetici şifre bilgisi.",
+      "properties": {
+        "password": { "type": "string" }
+      }
+    }
+  },
+  "auth": {
+    "providers": ["anonymous", "password"]
+  },
+  "firestore": {
+    "/settings/site": {
+      "schema": "SiteSettings",
+      "description": "Site genel ayarları singleton dokümanı."
+    },
+    "/secrets/admin": {
+      "schema": "AdminSecret",
+      "description": "Yönetici paneli giriş şifresi."
+    }
+  }
+}

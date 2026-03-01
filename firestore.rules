@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    /**
+     * VibeTR: Ücretsiz Plan Güvenlik Kuralları
+     * 
+     * Geliştirme aşamasında herkesin okuma/yazma yapmasına izin verir.
+     * Üretim (Production) aşamasında bu kurallar sadece yetkili 
+     * kullanıcılara izin verecek şekilde güncellenmelidir.
+     */
+    match /{path=**} {
+      allow read, write: if true;
+    }
+  }
+}

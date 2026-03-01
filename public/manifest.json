@@ -1,0 +1,24 @@
+
+{
+  "name": "VibeTR: Profesyonel Radyo Platformu",
+  "short_name": "VibeTR",
+  "description": "7/24 kesintisiz, senkronize canlı radyo ve müzik deneyimi.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e40af",
+  "icons": [
+    {
+      "src": "https://picsum.photos/seed/vibe/192/192",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://picsum.photos/seed/vibe/512/512",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
